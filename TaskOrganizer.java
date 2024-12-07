@@ -1,17 +1,19 @@
 import java.util.LinkedList;
 
-public class TaskOrganizer {
-    private LinkedList<TaskDetails> taskList; // LinkedList to store tasks
 
-   
+// This is using java's built in linked list to store the tasks
+public class TaskOrganizer {
+    private LinkedList<TaskDetails> taskList; 
+
+   //creating an empty list
     public TaskOrganizer() {
         taskList = new LinkedList<>();
     }
 
-    
+    // How to add tasks
     public void addTask(TaskDetails task) {
         taskList.add(task);}
-        
+        // Displayig tasks
     public void displayTasks() {
         if (taskList.isEmpty()) {
             System.out.println("No tasks to display.");
@@ -23,7 +25,7 @@ public class TaskOrganizer {
         }
     }
 
-    
+    //This is where I used the insertion sort method
     public void insertionSort() {
         for (int i = 1; i < taskList.size(); i++) {
             TaskDetails currentTask = taskList.get(i);
@@ -38,7 +40,7 @@ public class TaskOrganizer {
         }
     }
 
-   
+   // Code to remove tasks
     public void removeTask(String taskName) {
         if (taskList.isEmpty()) {
             System.out.println("No tasks to remove.");
